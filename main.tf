@@ -20,7 +20,7 @@ locals {
   triggers = [
     for location, description in local.trigger_descriptions : {
       location     = location
-      name         = "app-v${var.version_name}-inference-${location}-trigger"
+      name         = "chatapp-v${var.version_name}-inference-${location}-trigger"
       description  = description
       filename     = local.trigger_filenames[location]
     }
@@ -35,8 +35,8 @@ resource "google_cloudbuild_trigger" "app_trigger" {
   description  = each.value.description
 
   github {
-    owner = "kshitizregmi"
-    name  = "chatapp"
+    owner = "kshitizregmi"  # your github username/organization name
+    name  = "chatapp"       # your repo name/ organization repo name
     push {
       branch = var.branch_name
     }
