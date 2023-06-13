@@ -1,6 +1,8 @@
 # Clone these files on Google Console(GCP)
 
+Github link for cloudbuild.yaml file
 
+https://github.com/kshitizregmi/chatapp
 
 # Deploy using Terraform on Google Console
 Initialize Terraform:
